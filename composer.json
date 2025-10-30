@@ -1,0 +1,45 @@
+{
+  "name": "goletter/hyperf-sms",
+  "description": "hyperf短信扩展包",
+  "license": "MIT",
+  "keywords": [
+    "php",
+    "hyperf",
+    "sms",
+    "hyperf-sms"
+  ],
+  "support": {
+    "issues": "https://github.com/goletter/hyperf-sms/issues",
+    "source": "https://github.com/goletter/hyperf-sms"
+  },
+  "authors": [
+    {
+      "name": "goletter",
+      "email": "goletter@outlook.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "guzzlehttp/guzzle": "^7.10",
+    "hyperf/di": "~3.1.0"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^3.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Goletter\\Sms\\": "src/"
+    },
+    "files": [
+      "src/Functions.php"
+    ]
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "hyperf": {
+      "config": "Goletter\\Sms\\ConfigProvider"
+    }
+  }
+}
