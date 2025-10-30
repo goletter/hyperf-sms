@@ -15,17 +15,15 @@
     "hyperf-sms"
   ],
   "description": "hyperf短信扩展包",
-  "support": {
-    "issues": "https://github.com/goletter/hyperf-sms/issues",
-    "source": "https://github.com/goletter/hyperf-sms"
-  },
   "require": {
     "php": ">=8.1",
     "guzzlehttp/guzzle": "^7.10",
     "hyperf/di": "~3.1.0"
   },
-  "require-dev": {
-    "symfony/var-dumper": "^3.4"
+  "autoload-dev": {
+    "psr-4": {
+      "Goletter\\Sms\\Tests\\": "tests/"
+    }
   },
   "autoload": {
     "psr-4": {
