@@ -1,23 +1,24 @@
 {
   "name": "goletter/hyperf-sms",
-  "description": "hyperf短信扩展包",
+  "type": "library",
   "license": "MIT",
-  "keywords": [
-    "php",
-    "hyperf",
-    "sms",
-    "hyperf-sms"
-  ],
-  "support": {
-    "issues": "https://github.com/goletter/hyperf-sms/issues",
-    "source": "https://github.com/goletter/hyperf-sms"
-  },
   "authors": [
     {
       "name": "goletter",
       "email": "goletter@outlook.com"
     }
   ],
+  "keywords": [
+    "php",
+    "hyperf",
+    "sms",
+    "hyperf-sms"
+  ],
+  "description": "hyperf短信扩展包",
+  "support": {
+    "issues": "https://github.com/goletter/hyperf-sms/issues",
+    "source": "https://github.com/goletter/hyperf-sms"
+  },
   "require": {
     "php": ">=8.1",
     "guzzlehttp/guzzle": "^7.10",
@@ -37,9 +38,11 @@
   "config": {
     "sort-packages": true
   },
-  "extra": {
-    "hyperf": {
-      "config": "Goletter\\Sms\\ConfigProvider"
-    }
-  }
+  "scripts": {
+    "test": "co-phpunit -c phpunit.xml --colors=always",
+    "analyse": "phpstan analyse --memory-limit 300M -l 5 ./src",
+    "cs-fix": "php-cs-fixer fix $1"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }
